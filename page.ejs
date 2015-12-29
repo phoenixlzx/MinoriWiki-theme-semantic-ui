@@ -1,0 +1,24 @@
+<%- include _header %>
+<div class="ui grid">
+    <div class="twelve wide column">
+        <div class="column">
+            <div class="ui raised segment">
+                <a class="ui blue ribbon label"><%= page.category %></a>
+                <h1 class="page-title"><%= page.title %></h1>
+                <div class="page-content">
+                    <%- page.content %>
+                </div>
+                <div>
+                    <%- include _disqus_comment.ejs %>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="four wide column">
+        <div class="column">
+            <%- include _sidebar %>
+            <%- include _side_index  %>
+        </div>
+    </div>
+</div>
+<%- include _footer %>

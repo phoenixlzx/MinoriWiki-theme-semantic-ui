@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="<%= config['wiki'].language %>">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="<%= config['wiki'].author %>">
+    <meta name="description" content="<%= config['wiki'].description %>">
+    <title>
+        <% if (page && page.title) { %>
+        <%= page.title %> - <%= config['wiki'].title %>
+        <% } else { %>
+        <%= config['wiki'].title %> - <%= config['wiki'].tagline %>
+        <% } %>
+    </title>
+    <link href="<%= config['base'].path %>assets/semantic.min.css" rel="stylesheet"/>
+    <link href="<%= config['base'].path %>assets/style.css" rel="stylesheet"/>
+    <!-- <script src="<%= config['base'].path %>assets/semantic.min.js"></script> -->
+    <script src="<%= config['base'].path %>assets/highlight.min.js"></script>
+    <base target="_blank">
+</head>
+<body>
+<div>
+    <div class="ui container">
+        <div class="ui dividing header">
+            <h1 class="heading">
+                <a href="<%= config['base'].path %>" class="logo-text" target="_self">
+                    <%= config['wiki'].title %>
+                </a>
+            </h1>
+            <small><%= config['wiki'].tagline %></small>
+        </div>

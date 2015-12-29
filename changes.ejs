@@ -1,0 +1,31 @@
+<%- include _header %>
+<div class="ui grid">
+    <div class="twelve wide column">
+        <div class="ui feed">
+            <% commits.forEach(function(commit) { %>
+            <div class="event">
+                <div class="label">
+                    <i class="pencil icon"></i>
+                </div>
+                <div class="content">
+                    <div class="summary">
+                        <%= commit.subject %> by <%= commit.committerName %>
+                        <div class="date"><%= commit.committerDate %></div>
+                    </div>
+                    <div class="extra list">
+                        <% commit.files.forEach(function(f) { %>
+                        <a href="<%= config['base'].path + config['dir'].raw %>/<%= f %>" target="_self" class="item">
+                            <%= f %>
+                        </a>
+                        <% }) %>
+                    </div>
+                </div>
+            </div>
+            <% }) %>
+        </div>
+    </div>
+    <div class="four wide column">
+        <%- include _sidebar %>
+    </div>
+</div>
+<%- include _footer %>

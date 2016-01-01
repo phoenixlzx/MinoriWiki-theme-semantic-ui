@@ -1,35 +1,37 @@
 <%- include _header %>
 <div class="ui grid">
     <div class="twelve wide column">
-        <div class="index-content">
+        <div class="ui grid">
             <% categories.forEach(function(category) { %>
+            <div class="six wide column">
                 <div class="ui list">
                     <div class="item">
-                    <i class="folder icon big"></i>
-                    <div class="content">
-                        <div class="header">
-                            <h2><%= category.name %></h2>
-                        </div>
-                        <div class="list">
-                            <% category.pages.forEach(function(p) { %>
-                            <div class="item">
-                                <i class="file icon"></i>
-                                <div class="content">
-                                    <div class="header">
-                                        <a href="<%= config['base'].path %>page<%= p.link %>" target="_self" class="item">
-                                            <h4>
-                                                <% if (p.link.lastIndexOf('/') !== 0) { %>
-                                                <% var prelink = p.link.split('/')[1] %>
-                                                <%= prelink %> / <%= p.title %>
-                                                <% } else { %>
-                                                <%= p.title %>
-                                                <% } %>
-                                            </h4>
-                                        </a>
+                        <i class="folder icon big"></i>
+                        <div class="content">
+                            <div class="header">
+                                <h2><%= category.name %></h2>
+                            </div>
+                            <div class="ui list">
+                                <% category.pages.forEach(function(p) { %>
+                                <div class="item">
+                                    <i class="file icon"></i>
+                                    <div class="content">
+                                        <div class="header">
+                                            <a href="<%= config['base'].path %>page<%= p.link %>" target="_self" class="item">
+                                                <h4>
+                                                    <% if (p.link.lastIndexOf('/') !== 0) { %>
+                                                    <% var prelink = p.link.split('/')[1] %>
+                                                    <%= prelink %> / <%= p.title %>
+                                                    <% } else { %>
+                                                    <%= p.title %>
+                                                    <% } %>
+                                                </h4>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
+                                <% }) %>
                             </div>
-                            <% }) %>
                         </div>
                     </div>
                 </div>

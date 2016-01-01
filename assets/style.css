@@ -21,6 +21,11 @@ pre {
     background-color: #f5f5f5;
 }
 
+code {
+    background-color: #f5f5f5;
+    border-radius: 2px;
+}
+
 a.anchor {
     display: inline-block;
 }

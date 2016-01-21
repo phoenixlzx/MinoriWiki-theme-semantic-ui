@@ -2,7 +2,7 @@
     <div class="item">
         <div class="header"><a href="<%= config['base'].path %>" target="_self">Homepage</a></div>
         <% if (config['wiki'].log) { %>
-        <div class="header"><a href="<%= config['base'].path %>changelog">Changelog</a></div>
+        <div class="header"><a href="<%= config['base'].path %>changelog/">Changelog</a></div>
         <% } %>
     </div>
     <% categories.forEach(function(category) { %>
@@ -10,7 +10,7 @@
         <div class="header"><%= category.name %></div>
         <div class="menu">
             <% category.pages.forEach(function(p) { %>
-            <a href="<%= config['base'].path %>page<%= p.link %>" target="_self" class="item">
+            <a href="<%= config['base'].path %>page<%= p.link %>/" target="_self" class="item">
                 <% if (p.link.lastIndexOf('/') !== 0) { %>
                 <% var prelink = p.link.split('/')[1] %>
                 <%= prelink %> / <%= p.title %>

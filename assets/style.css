@@ -73,7 +73,7 @@ a.anchor:active {
 
 .footer {
     margin-top: 1em;
-    bottom: 0;
+/*    bottom: 0;  */
     width: 100%;
     /* Set the fixed height of the footer here */
     position: absolute;

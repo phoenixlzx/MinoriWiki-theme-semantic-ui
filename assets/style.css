@@ -3,10 +3,6 @@ html {
     min-height: 100%;
 }
 
-body {
-    font-family: Lato, "Helvetica Neue", "Roboto", "Open Sans", "Noto Sans", "Source Han Sans SC", "WenQuanYi Microhei", "Hiragino Sans GB", "Microsoft Yahei", "Droid Sans Fallback", sans-serif;
-}
-
 img {
     max-width: 90%;
     max-height: 40em;
@@ -80,6 +76,7 @@ a.anchor:active {
     bottom: 0;
     width: 100%;
     /* Set the fixed height of the footer here */
+    position: absolute;
     height: 60px;
     background-color: #f5f5f5;
 }

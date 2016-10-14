@@ -17,7 +17,7 @@
                                     <i class="file icon"></i>
                                     <div class="content">
                                         <div class="header">
-                                            <a href="<%= config['base'].path %>page<%= p.link %>/" target="_self" class="item">
+                                            <a href="<%= config['base'].path %><%= config['dir'].page %><%= p.link %>/" target="_self" class="item">
                                                 <h4>
                                                     <% if (p.link.lastIndexOf('/') !== 0) { %>
                                                     <% var prelink = p.link.split('/')[1] %>
